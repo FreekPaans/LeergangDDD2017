@@ -10,15 +10,27 @@ namespace Hotel.DAL {
         }
 
         public int Add(Employee employee) {
-            var employeeRecord = EmployeeRecord.FromEmployee(employee);
+            var employeeRecord = new EmployeeRecord();
 
             using (var context = new HotelDbContext()) {
+                employeeRecord.UpdateFromEmployee(employee);
+
                 context.EmployeeRecords.Add(employeeRecord);
 
                 context.SaveChanges();
             }
 
             return employeeRecord.EmployeeId;
+        }
+
+        public void Update(Employee employee) {
+            using (var context = new HotelDbContext()) {
+                var employeeRecord = context.EmployeeRecords.Single(_ => _.EmployeeId == employee.EmployeeId);
+
+                employeeRecord.UpdateFromEmployee(employee);
+
+                context.SaveChanges();
+            }
         }
     }
 }

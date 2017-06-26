@@ -17,13 +17,10 @@ namespace Hotel.DAL {
             return new Employee(EmployeeId, FirstName, LastName, BirthDate);
         }
 
-        internal static EmployeeRecord FromEmployee(Employee employee) {
-            return new EmployeeRecord {
-                EmployeeId = employee.EmployeeId,
-                FirstName = employee.FirstName,
-                LastName = employee.LastName,
-                BirthDate = employee.BirthDate
-            };
+        internal void UpdateFromEmployee(Employee employee) {
+            FirstName = employee.FirstName;
+            LastName = employee.LastName;
+            BirthDate = employee.BirthDate;
         }
     }
 }
