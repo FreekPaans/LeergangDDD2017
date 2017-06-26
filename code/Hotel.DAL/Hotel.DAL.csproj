@@ -50,6 +50,15 @@
     <Compile Include="EmployeeRepository.cs" />
     <Compile Include="EmployeeRecord.cs" />
     <Compile Include="HotelDbContext.cs" />
+    <Compile Include="Migrations\201706261422103_InitialCreate.cs" />
+    <Compile Include="Migrations\201706261422103_InitialCreate.Designer.cs">
+      <DependentUpon>201706261422103_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706261435449_EmployeeAddLastName.cs" />
+    <Compile Include="Migrations\201706261435449_EmployeeAddLastName.Designer.cs">
+      <DependentUpon>201706261435449_EmployeeAddLastName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +70,14 @@
       <Project>{3e5de34a-bbad-49c6-b55d-28b513e7614a}</Project>
       <Name>Hotel.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201706261422103_InitialCreate.resx">
+      <DependentUpon>201706261422103_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706261435449_EmployeeAddLastName.resx">
+      <DependentUpon>201706261435449_EmployeeAddLastName.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

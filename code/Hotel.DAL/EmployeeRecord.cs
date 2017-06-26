@@ -8,15 +8,17 @@ namespace Hotel.DAL {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EmployeeId { get; set; }
         public string FirstName { get; set; }
+        public string LastName { get; set; }
 
         internal Employee ToEmployee() {
-            return new Employee(EmployeeId, FirstName);
+            return new Employee(EmployeeId, FirstName, LastName);
         }
 
         internal static EmployeeRecord FromEmployee(Employee employee) {
             return new EmployeeRecord {
                 EmployeeId = employee.EmployeeId,
-                FirstName = employee.FirstName
+                FirstName = employee.FirstName,
+                LastName = employee.LastName
             };
         }
     }

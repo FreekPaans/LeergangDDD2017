@@ -7,7 +7,7 @@ namespace Hotel.Tests {
     public class EmployeeRepositoryTests {
         [TestMethod]
         public void can_save_employee() {
-            var employeeToSave = new Employee("Foo");
+            var employeeToSave = new Employee("Foo", "Bar");
 
             int employeeId = SaveEmployee(employeeToSave);
 
@@ -16,11 +16,12 @@ namespace Hotel.Tests {
 
         [TestMethod]
         public void can_load_employee() {
-            var employeeToSave = new Employee("Foo2");
+            var employeeToSave = new Employee("Foo2", "Bar2");
 
             var employee = SaveAndLoadEmployee(employeeToSave);
 
             Assert.AreEqual("Foo2", employee.FirstName);
+            Assert.AreEqual("Bar2", employee.LastName);
         }
 
         private static Employee SaveAndLoadEmployee(Employee employeeToSave) {
