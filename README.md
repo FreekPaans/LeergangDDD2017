@@ -1,6 +1,6 @@
 ## LocalDB benodigd
 
-Voor dit practicum is het noodzakelijk dat er werkende localdb met de naam `(localdb)\v12.0` op je machine staat.
+Voor dit practicum is het noodzakelijk dat er een werkende localdb met de naam `(localdb)\v12.0` op je machine staat.
 
 Je kan dit met het commando `sqllocaldb i` testen:
 ```
