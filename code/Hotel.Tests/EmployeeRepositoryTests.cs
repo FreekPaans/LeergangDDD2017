@@ -1,4 +1,5 @@
-﻿using Hotel.DAL;
+﻿using System;
+using Hotel.DAL;
 using Hotel.Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -7,7 +8,7 @@ namespace Hotel.Tests {
     public class EmployeeRepositoryTests {
         [TestMethod]
         public void can_save_employee() {
-            var employeeToSave = new Employee("Foo", "Bar");
+            var employeeToSave = new Employee("Foo", "Bar", new DateTime(1990, 03, 01));
 
             int employeeId = SaveEmployee(employeeToSave);
 
@@ -16,12 +17,13 @@ namespace Hotel.Tests {
 
         [TestMethod]
         public void can_load_employee() {
-            var employeeToSave = new Employee("Foo2", "Bar2");
+            var employeeToSave = new Employee("Foo2", "Bar2", new DateTime(1991, 06, 02));
 
             var employee = SaveAndLoadEmployee(employeeToSave);
 
             Assert.AreEqual("Foo2", employee.FirstName);
             Assert.AreEqual("Bar2", employee.LastName);
+            Assert.AreEqual(new DateTime(1991, 06, 02), employee.BirthDate);
         }
 
         private static Employee SaveAndLoadEmployee(Employee employeeToSave) {

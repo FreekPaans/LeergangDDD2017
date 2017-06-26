@@ -58,6 +58,10 @@
     <Compile Include="Migrations\201706261435449_EmployeeAddLastName.Designer.cs">
       <DependentUpon>201706261435449_EmployeeAddLastName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706261454216_EmployeeAddBirthDate.cs" />
+    <Compile Include="Migrations\201706261454216_EmployeeAddBirthDate.Designer.cs">
+      <DependentUpon>201706261454216_EmployeeAddBirthDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -77,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706261435449_EmployeeAddLastName.resx">
       <DependentUpon>201706261435449_EmployeeAddLastName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706261454216_EmployeeAddBirthDate.resx">
+      <DependentUpon>201706261454216_EmployeeAddBirthDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

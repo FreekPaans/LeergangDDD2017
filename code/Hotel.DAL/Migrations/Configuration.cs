@@ -5,7 +5,7 @@ namespace Hotel.DAL.Migrations {
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
             ContextKey = "Hotel.DAL.HotelDbContext";
         }
 
