@@ -16,3 +16,7 @@ Als `sqllocaldb` wel werkt, maar `v12.0` er niet tussen staat, maak deze dan aan
 ```
 C:\>sqllocaldb c "v12.0"
 ```
+
+## Migrations
+
+Zie [https://msdn.microsoft.com/en-us/library/jj591621(v=vs.113).aspx]() voor toelichting over het gebruik van migrations, specifiek onder het kopje "Generating & Running Migrations".
