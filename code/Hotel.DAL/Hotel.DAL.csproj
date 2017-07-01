@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DayOccupancyRecord.cs" />
+    <Compile Include="DayOccupancyRepo.cs" />
     <Compile Include="EmployeeRepository.cs" />
     <Compile Include="EmployeeRecord.cs" />
     <Compile Include="HotelDbContext.cs" />
@@ -62,8 +64,13 @@
     <Compile Include="Migrations\201706261454216_EmployeeAddBirthDate.Designer.cs">
       <DependentUpon>201706261454216_EmployeeAddBirthDate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706301307548_occ.cs" />
+    <Compile Include="Migrations\201706301307548_occ.Designer.cs">
+      <DependentUpon>201706301307548_occ.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservationRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -84,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706261454216_EmployeeAddBirthDate.resx">
       <DependentUpon>201706261454216_EmployeeAddBirthDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706301307548_occ.resx">
+      <DependentUpon>201706301307548_occ.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

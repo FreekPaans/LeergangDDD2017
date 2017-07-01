@@ -8,7 +8,8 @@ namespace Hotel.Tests {
     public class TestsSetupAndCleanup {
         [AssemblyInitialize]
         public static void AssemblyInitialize(TestContext testContext) {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<HotelDbContext, Configuration>());
+            Database.SetInitializer(new DropCreateDatabaseAlways<HotelDbContext>());
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<HotelDbContext, Configuration>());
         }
 
         [AssemblyCleanup]

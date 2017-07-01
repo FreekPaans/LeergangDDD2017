@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="EmployeeAppServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservationTests.cs" />
     <Compile Include="TestsSetupAndCleanup.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -7,5 +7,6 @@ namespace Hotel.DAL {
         }
 
         public DbSet<EmployeeRecord> EmployeeRecords { get; set; }
+        public DbSet<DayOccupancyRecord> DayOccupancyRecords { get; set; }
     }
 }
